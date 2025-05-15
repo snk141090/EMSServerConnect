@@ -6,7 +6,7 @@ using TIBCO.EMS;
 
 namespace EMSServerConnect;
 
-public class JMSPublisher(TibcoEMSService tibcoEMSService, ILogger<JMSPublisher> logger)
+public class JMSPublisher(TibcoEMSService tibcoEMSService, ILogger<JMSPublisher> logger)  
 {
     [Function("JMSPublisher")]
     public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req)
